@@ -4,6 +4,7 @@ body{
 	font-family: 'Raleway', sans-serif;
 	color: #002046;
 	scroll-behavior: smooth;
+	overflow-x: none;
 }
 
 .masthead{
