@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;600;700;800;900&display=swap');
+html{
+  scroll-behavior: smooth;
+}
 
 body{
 	font-family: 'Raleway', sans-serif;
 	color: #002046;
-	scroll-behavior: smooth;
 	overflow-x: none;
 }
 
@@ -12,6 +14,14 @@ body{
     background-size: cover; 
     height: 100vh;
     background-position: right;
+}
+
+.inner-masthead{
+  background:url(img/header.jpg);
+    background-size: cover; 
+    height: 100%;
+    background-position: right;
+    background-attachment: fixed;
 }
 
 .science-bg{
@@ -32,10 +42,17 @@ body{
 	width: 150px;
 }
 
+.nav-link{
+  color: white !important;
+}
+
+.nav-link:hover, .active{
+  text-decoration: underline;
+}
+
 .header-height{
     height: 80vh;
 }
-
 
 .heading{
 	font-weight: 900;
@@ -79,6 +96,10 @@ body{
 
 .card-title{
 	font-weight: 700;
+}
+
+.shs-section:hover{
+  text-decoration: none;
 }
 
 .flex-content {
@@ -200,7 +221,11 @@ body{
 
 @-webkit-keyframes text-pop-up-top{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}@keyframes text-pop-up-top{0%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:none}100%{-webkit-transform:translateY(-50px);transform:translateY(-50px);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;text-shadow:0 1px 0 #ccc,0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 50px 30px rgba(0,0,0,.3)}}
 
+
 @media screen and (max-width: 768px){
+  .logo {
+    width: 100px;
+  }
 	.heading, .heading-title{
 		font-size: 30px; 
 	}

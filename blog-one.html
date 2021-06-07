@@ -9,14 +9,41 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link href="img/sj.svg" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
 
 	<title>STEM by Joshua</title>
 </head>
 <body>
 	<header class="dark-blue-bg">
-	    <nav class="text-center pb-2">
-            <a href="index.html"><img src="img/logo.png" class="logo"></a>
-	    </nav>
+	    <nav class="navbar navbar-expand-lg navbar-light container">
+		  	<a href="index.html"><img src="img/logo.png" class="logo"></a>
+		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
+
+		  	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		    	<ul class="navbar-nav ml-auto">
+		      		<li class="nav-item">
+		        		<a class="nav-link" href="index.html">Home</a>
+		      		</li>
+		      		<li class="nav-item">
+		        		<a class="nav-link" href="index.html#subjects">Subjects</a>
+		      		</li>
+		      		<li class="nav-item">
+		        		<a class="nav-link" href="index.html#courses">Courses</a>
+		      		</li>
+		      		<li class="nav-item active">
+		        		<a class="nav-link" href="index.html#blogs">Blogs</a>
+		      		</li>
+		      		<li class="nav-item">
+		        		<a class="nav-link" href="shop.html">Shop</a>
+		      		</li>
+		      		<li class="nav-item active">
+		        		<button id='cart-button' class="trigger cart-button-style">Show Cart</button>
+		      		</li>
+		    	</ul>
+		  	</div>
+		</nav>
 	</header>
 
 	<section class="container py-5">
@@ -71,6 +98,56 @@
 		</div>
 	</section>
 	
+	<div id='cart-wrapper' class="slider close">
+        <div id='cart'>
+            <div id="cart-products-wrapper">
+                <table id="cart-table">
+                <thead id="cart-table-header">
+                     <th class="name-col">Product Name</th> 
+                     <th class="quantity-col">Quantity</th>       
+                     <th class="price-col">Price</th>
+                     <th class="updated-price-col">Updated Price</th>
+                     <th class="update-col">Update</th>
+                     <th class="remove-col">Remove</th>
+                </thead>
+                <tbody id="cart-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div id='amount-controls'>
+            <div id="cart-amount-wrapper">
+                <table>
+                    <tbody>
+                        <tr id='subtotal-wrappper'>
+                            <td id="subtotal-label">Subtotal:</td>
+                            <td id="subtotal">0.00</td>
+                        </tr>
+
+                        <tr id='total-wrapper'>
+                            <td id="total-label">Total:</td>
+                            <td id="total">0.00</td>
+                        </tr>
+
+                        <tr id="promo-checkout">
+                            <td id="promo-wrapper">
+                                <input id="promo" placeholder="Input Promo Code">
+                                <button id="apply-promo">Apply Promo</button>
+                            </td>
+
+                            <td>
+                                <button id="checkout">Checkout</button>
+                            </td>
+                            
+                            <td>
+                                <button id="ks" class="keep-shopping">Keep Shopping</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+	</div>
 
 	<footer class="dark-blue-bg">
 		<div class="container text-center py-4">
@@ -78,5 +155,10 @@
 			<p class="text-muted mb-0 mt-1">JOSHUA RAE MASEDMAN WA-AY | 2021</p>
 		</div>
 	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="shop.js"></script>
 </body>
 </html>
